@@ -1,0 +1,9 @@
+@import "@/app/mixins.scss";
+
+#hero-container {
+  #hero-image {
+    img {
+      @include heroImage()
+    }
+  }
+}

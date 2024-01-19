@@ -1,0 +1,42 @@
+@import "@/app/mixins.scss";
+
+#header-container {
+  @include flexAlignCenter();
+  padding: 0 1em;
+  justify-content: space-between;
+  margin-bottom: 3em;
+
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+  }
+
+  #nav {
+    @include flex();
+    gap: 1.5em;
+
+    a {
+      font-size: 1.2em;
+      font-weight: 500;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: 0;
+        bottom: 0.1em;
+        background-color: #6fb3b8;
+        transition: height 0.2s;
+      }
+
+      &:hover::after,
+      &.isActive::after {
+        height: 5px;
+      }
+    }
+  }
+}
