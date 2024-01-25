@@ -1,5 +1,5 @@
 import Target from "@/components/blog_target/target";
-import Card from "@/app/card/card";
+import Card from "@/components/card/card";
 import Hero from "@/components/hero/Hero";
 
 export default function Home() {
