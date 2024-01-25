@@ -1,10 +1,10 @@
 import IUpload from "@/interfaces/IUpload";
 import { truncate } from "@/utils/truncate";
-import Image from "next/image";
 import Link from "next/link";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import IPost from "@/interfaces/IPost";
+
 
 type DisplayCardProps = {
   post: IPost;
@@ -21,7 +21,7 @@ export default function DisplayCard({ post }: DisplayCardProps) {
           {post.upload &&
             post.upload.map((upload: IUpload, index: number) => (
               <Link key={index} href={`/post/${post.id}`}>
-                <Image src={upload.originalname} alt={upload.fieldname} />
+                <img srcSet={upload.originalname} alt={upload.fieldname} />
               </Link>
             ))}
           <h3>{post.title}</h3>
