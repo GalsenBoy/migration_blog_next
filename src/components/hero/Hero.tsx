@@ -5,7 +5,7 @@ export default function Hero() {
     <section>
       <div id="hero-container">
         <div id="hero-image">
-          <Image width={1168} height={500} src="/reactnest.webp" alt="react" />
+          <Image src="/reactnest.webp" width={1168} height={500}  alt="react" />
         </div>
       </div>
     </section>
