@@ -1,10 +1,10 @@
 import IUpload from "@/interfaces/IUpload";
 import { truncate } from "@/utils/truncate";
-import Image from "next/image";
 import Link from "next/link";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import IPost from "@/interfaces/IPost";
+
 
 type DisplayCardProps = {
   post: IPost;
