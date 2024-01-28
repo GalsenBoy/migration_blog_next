@@ -5,8 +5,6 @@ export async function getOnePost(uuid: string) {
     if (!res.ok) {
         throw new Error("Failed to fetch data");
     }
-    console.log(uuid);
-
     return res.json()
-    // return await res.json();
+
 }
