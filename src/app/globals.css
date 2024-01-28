@@ -12,7 +12,7 @@
 
 body {
   background-color: var(--bgColor);
-  color: var(--textColor);
+  color: var(--title);
   font-family: "Noto Sans JP", sans-serif;
   box-sizing: border-box;
   max-width: 1200px;

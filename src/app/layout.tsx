@@ -18,11 +18,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section>
-      <link rel="icon" href="/bc.webp" sizes="any" />
-      <Header />
-      {children}
-      <Footer />
-    </section>
+    <html lang="fr">
+      <head>
+        <link rel="icon" href="/bc.webp" sizes="any" />
+      </head>
+      <body>
+        {" "}
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
   );
 }

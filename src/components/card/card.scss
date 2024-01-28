@@ -22,12 +22,15 @@
     }
 
     #card-data {
-      h3 {
+      h2 {
         @include marginTop(0.5em);
         font-weight: 700;
         font-size: 1.3em;
-        color: var(--title);
         text-transform: uppercase;
+      }
+
+      p {
+        @include marginTop(1em);
       }
 
       #publication {
@@ -35,9 +38,7 @@
       }
     }
 
-    #card-data,
-    p {
-      @include marginTop(1em);
-    }
+
+
   }
 }

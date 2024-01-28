@@ -1,19 +1,16 @@
 import IUpload from "@/interfaces/IUpload";
 import { truncate } from "@/utils/truncate";
 import Link from "next/link";
-import { format } from "date-fns";
-import { fr } from "date-fns/locale";
-import IPost from "@/interfaces/IPost";
 
+import IPost from "@/interfaces/IPost";
+import { formattedDate } from "@/utils/formattedDate";
+import Image from "next/image";
 
 type DisplayCardProps = {
   post: IPost;
 };
 
 export default function DisplayCard({ post }: DisplayCardProps) {
-  const formattedDate = format(new Date(post.create_at), "dd MMM yyyy", {
-    locale: fr,
-  });
   return (
     <div id="card-container">
       <div id="card-data">
@@ -22,11 +19,17 @@ export default function DisplayCard({ post }: DisplayCardProps) {
             post.upload.map((upload: IUpload, index: number) => (
               <Link key={index} href={`/post/${post.id}`}>
                 <img srcSet={upload.originalname} alt={upload.fieldname} />
+                {/* <Image
+                  src={upload.originalname}
+                  alt={upload.fieldname}
+                  width={100}
+                  height={100}
+                /> */}
               </Link>
             ))}
-          <h3>{post.title}</h3>
-          <p>{truncate(post.description)}</p>
-          <p id="publication">{formattedDate}</p>
+          <h2>{post.title}</h2>
+          <p id="description">{truncate(post.description)}</p>
+          <p id="publication">{formattedDate(post.create_at)}</p>
         </div>
       </div>
     </div>

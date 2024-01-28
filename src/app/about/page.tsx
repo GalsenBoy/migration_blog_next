@@ -15,7 +15,7 @@ export default function About() {
     <section>
       <div id="about">
         <div id="about-content">
-          <Image width={350} height={1} src="/moi.webp" alt="bilaly" />
+          <Image width={350} height={75} src="/moi.webp" alt="bilaly" />
           <div id="text">
             <p className="inline">Salut ! Je m'appelle </p>
             <h1>
